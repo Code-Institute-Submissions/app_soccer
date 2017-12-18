@@ -1,0 +1,24 @@
+{
+  "name": "app_soccer",
+  "homepage": "https://github.com/EamonPen/app_soccer",
+  "authors": [
+    "Eamon Pender <eamon.pender@gmail.com>"
+  ],
+  "description": "Stream 1 Project",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "js": "^6.0.1",
+    "angular": "^1.6.7",
+    "popper.js": "^1.12.9",
+    "angular-route": "^1.6.7"
+  }
+}
