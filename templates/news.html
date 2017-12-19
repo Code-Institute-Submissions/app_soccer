@@ -1,1 +1,24 @@
-<h3>news</h3>
+<div class="container">
+
+	<div ng-controller="getNewsCTRL">
+<div class="jumbotron text-center">
+  <div ng-repeat="news in newsReports.articles" class="container" >
+  	<img class="card-img" ng-src="{{news.urlToImage}}" alt="Card image" width="200px">
+    <h3>{{news.title}}</h3>
+    <p>{{news.description}}</p>
+    <p><a ng-href="{{news.url}}" class="btn btn-primary">Read More</a></p>
+    <p class="card-text" ng-bind="news.publishedAt | date:'MM/dd/yyyy'">{{news.publishedAt}}</p>
+  </div>
+</div>
+
+
+<div class="card bg-dark text-white" ng-repeat="news in newsReports.articles">
+  <img class="card-img" ng-src="{{news.urlToImage}}" alt="Card image" width="200px">
+  <div class="card-img-overlay">
+    <h4 class="card-title">{{news.title}}</h4>
+    <p class="card-text">{{news.description}}</p>
+    <p class="card-text" ng-bind="news.publishedAt | date:'MM/dd/yyyy'">{{news.publishedAt}}</p>
+  </div>
+</div>
+</div>
+</div>
