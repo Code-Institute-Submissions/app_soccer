@@ -1,19 +1,42 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-2">
-			<div id="customDiv">
-				Left Sidebar
-			</div>
-		</div>
-		<div class="col-md-8">
-			<div id="customDiv">
-				Main Content
-			</div>
-		</div>
-		<div class="col-md-2">
-		<div id="customDiv">
-				Right Sidebar
-			</div>
-		</div>
-	</div>	
-</div>
+<div class="container" ng-controller="getNewsCTRL">
+	
+	<div class="col-md-7">
+  <h2 class="breakingNews">BREAKING NEWS</h2>
+  <slider ng-include="'templates/slider.html'"></slider>
+
+ </div>
+  <div class="col-md-5">
+    <div class="row row-eq-height newscards">
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-4 col-eq-height" ng-repeat="newsItem in newsReports.articles">
+                <div class="card">
+                    <img class="card-img-top" ng-src="{{newsItem.urlToImage}}">
+                    <p class="card-text" ng-bind="newsItem.publishedAt | date:'MM/dd/yyyy'">{{newsItem.publishedAt}}</p>
+                    <div class="card-block">
+                        <h5 class="text-bold">{{newsItem.title}}</h5>
+    <p><a ng-href="{{newsItem.url}}" class="btn btn-primary">Read More</a></p>
+    
+                    </div>
+                </div>
+            </div>
+            </div>
+  </div>
+  <div class="col-md-7">
+  <h3>LATEST NEWS</h3>
+    <div ng-repeat="newsItem in newsReports.articles" ng-if="$index > 3">
+  <div class="row newscards">
+    
+        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-sm-4">
+            <img class="card-img-top" ng-src="{{newsItem.urlToImage}}">
+                    <p class="card-text" ng-bind="newsItem.publishedAt | date:'MM/dd/yyyy'">{{newsItem.publishedAt}}</p>
+                    <div class="card-block">
+                        <h3 class="text-bold">{{newsItem.title}}</h3>
+                        <p>{{newsItem.description}}</p>
+    <p><a ng-href="{{newsItem.url}}" class="btn btn-primary">Read More</a></p>
+        </div>
+    </div>
+
+</div></div>
+ </div>
+  </div>
+

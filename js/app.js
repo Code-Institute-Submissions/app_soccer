@@ -1,5 +1,5 @@
 var app = angular.module('soccerApp', ['ngRoute','NewsCtrl','ContactController'
-    ,'SoccerNewsService']);
+    ,'SoccerNewsService','ui.bootstrap']);
 app.config(function($routeProvider,$locationProvider) {
     //$locationProvider.hashPrefix('');
     $routeProvider
