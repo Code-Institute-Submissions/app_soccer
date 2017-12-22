@@ -6,17 +6,17 @@
  * JSON Data sourced from https://newsapi.org
 
 ## Features
- Header
+#### Header
  * Navbar links to other pages
- Front page
+#### Front page
  * Bootstrap carousel
  * Bootstrap cards
  * Click events to show/ hide news in detail
  * click events to change json source
- News Page
+#### News Page
  * Full news reports
  * Click events to open news source website
- Contact Page
+#### Contact Page
  * Fields: Name, Email and message
  * Basic validation
  * Submit button becaomes active when valid data entered. 
