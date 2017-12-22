@@ -24,13 +24,7 @@ news.controller('getNewsCTRL', function($scope, SoccerNewsAPIService) {
             .then(function(results) {
                 $scope.newsReports = results.data;
                 console.log($scope.newsReports);
-                
-                $('.carousel').carousel({
-          interval: 3000
-        });
-
-
-              $scope.changeNews = function(news_src){
+                $scope.changeNews = function(news_src){
         $scope.getNews(news_src);
         $scope.hideNews()
     }
@@ -46,6 +40,13 @@ news.controller('getNewsCTRL', function($scope, SoccerNewsAPIService) {
         $scope.showNewsAuthor = '';
         
     }
+    $('.carousel').carousel({
+          interval: 3000
+        });
+                
+
+
+             
 
                
                 
@@ -54,7 +55,7 @@ news.controller('getNewsCTRL', function($scope, SoccerNewsAPIService) {
             });
 
     }
-
+ 
     $scope.getNews(news_src_espn);
     
 });

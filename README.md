@@ -1,10 +1,26 @@
 # AngularJS Stream 1 Project
  
 ## Overview
- Stream 1 project.
- Soccer website containing news, tables and general info.
+   SPORTSNEWS.COM
+ * Sports news website showing news from major sports websites.
+ * JSON Data sourced from https://newsapi.org
+
 ## Features
- 
+ Header
+ * Navbar links to other pages
+ Front page
+ * Bootstrap carousel
+ * Bootstrap cards
+ * Click events to show/ hide news in detail
+ * click events to change json source
+ News Page
+ * Full news reports
+ * Click events to open news source website
+ Contact Page
+ * Fields: Name, Email and message
+ * Basic validation
+ * Submit button becaomes active when valid data entered. 
+ * When submitted successfully the form is hidden and a success message is show.  
 ## Tech Used
 AngularJS Stream 1 Project uses a number of open source projects to work properly:
  * AngularJS [![N|Solid](https://angularjs.org/favicon.ico)](https://angularjs.org/)
@@ -15,7 +31,7 @@ AngularJS Stream 1 Project uses a number of open source projects to work properl
 And of course AngularJS Stream 1 Project itself is open source with a public repository
 on GitHub.
 ## Contributing
- 
+ Eamon Pender
 ### Getting the code up and running
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
 2. After you've that you'll need to make sure that you have **npm** and **bower** installed
