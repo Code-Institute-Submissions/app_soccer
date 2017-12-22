@@ -1,0 +1,13 @@
+<div class="row newscards">
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-4" ng-repeat="newsItem in newsReports.articles">
+                <div class="card h-100">
+                    <img class="card-img-top" ng-src="{{newsItem.urlToImage}}">
+                    <p class="card-text" ng-bind="newsItem.publishedAt | date:'MM/dd/yyyy'">{{newsItem.publishedAt}}</p>
+                    <div class="card-block">
+                        <h5 class="text-bold">{{newsItem.title}}</h5>
+    <p><a ng-href="/" class="btn btn-primary" ng-click="showNews(newsItem)">Read More</a></p>
+    
+                    </div>
+                </div>
+            </div>
+            </div>

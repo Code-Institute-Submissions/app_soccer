@@ -1,6 +1,6 @@
 angular.module('SoccerNewsService', []).factory("SoccerNewsAPIService", ["$http", function($http) {
     return {
-        getNews: function(url,apiKey,news_src) {
+        getNewsFeed: function(url,apiKey,news_src) {
            
            return $http.get(url, {
         params:  {'sources':news_src,'apiKey': apiKey,},

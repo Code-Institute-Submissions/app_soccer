@@ -1,28 +1,28 @@
 <div id="slides_control">
- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+ <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="1000">
  	<ol class="carousel-indicators">
  		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
  		<li data-target="#myCarousel" data-slide-to="1"></li>
  		<li data-target="#myCarousel" data-slide-to="2"></li>
  		<li data-target="#myCarousel" data-slide-to="3"></li>
  	</ol>
- 	<div class="carousel-inner" role="listbox">
- 		<div class="item active">
+ 	<div class="carousel-inner">
+ 		<div class="item active" interval="1000">
  			<img ng-src="{{newsReports.articles[0].urlToImage}}">
- 			<div class="carousel-caption"><h3>{{newsReports.articles[0].title}}</h3><br><button type="button" class="btn btn-default">Read more</button></div>
+ 			<div class="carousel-caption"><h3>{{newsReports.articles[0].title}}</h3><br><button type="button" class="btn btn-default" ng-click="showNews(newsReports.articles[0])">Read more</button></div>
  		</div> 	<!--END ACTIVE -->
  			
- 		<div class="item"> 			
+ 		<div class="item" interval="10000"> 			
  			<img src="{{newsReports.articles[1].urlToImage}}">
- 			<div class="carousel-caption"><h3>{{newsReports.articles[1].title}}</h3><br><button type="button" class="btn btn-default">Read more</button></div>
+ 			<div class="carousel-caption"><h3>{{newsReports.articles[1].title}}</h3><br><button type="button" class="btn btn-default" ng-click="showNews(newsReports.articles[1])">Read more</button></div>
  		</div> <!--END NEXT IMAGE -->
- 		<div class="item"> 			
+ 		<div class="item" interval="10000"> 			
  			<img src="{{newsReports.articles[2].urlToImage}}">
- 			<div class="carousel-caption"><h3>{{newsReports.articles[2].title}}</h3><br><button type="button" class="btn btn-default">Read more</button></div>
+ 			<div class="carousel-caption"><h3>{{newsReports.articles[2].title}}</h3><br><button type="button" class="btn btn-default" ng-click="showNews(newsReports.articles[2])">Read more</button></div>
  		</div> <!--END NEXT IMAGE -->
- 		<div class="item"> 			
+ 		<div class="item" interval="5000"> 			
  			<img src="{{newsReports.articles[3].urlToImage}}">
- 			<div class="carousel-caption"><h3>{{newsReports.articles[3].title}}</h3><br><button type="button" class="btn btn-default">Read more</button></div>
+ 			<div class="carousel-caption"><h3>{{newsReports.articles[3].title}}</h3><br><button type="button" class="btn btn-default" ng-click="showNews(newsReports.articles[3])">Read more</button></div>
  		</div> <!--END NEXT IMAGE -->
  		
  	</div>

@@ -1,42 +1,43 @@
 <div class="container" ng-controller="getNewsCTRL">
 	
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a ng-click="changeNews('espn')" class="nav-link active" href="#">ESPN</a>
+  </li>
+  <li class="nav-item">
+    <a ng-click="changeNews('fox-sports')" class="nav-link" href="#">FOX SPORTS</a>
+  </li>
+  <li class="nav-item">
+    <a ng-click="changeNews('talksport')" class="nav-link" href="#">TALKSPORT</a>
+  </li>
+  <li class="nav-item">
+    <a ng-click="changeNews('the-sport-bible')" class="nav-link" href="#">THE SPORT BIBLE</a>
+  </li>
+  <li class="nav-item">
+    <a ng-click="changeNews('four-four-two')" class="nav-link" href="#">FOUR FOUR TWO</a>
+  </li>
+</ul>
+
 	<div class="col-md-7">
   <h2 class="breakingNews">BREAKING NEWS</h2>
-  <slider ng-include="'templates/slider.html'"></slider>
-
- </div>
-  <div class="col-md-5">
-    <div class="row row-eq-height newscards">
-            <div class="col-sm-6 col-md-4 col-lg-3 mt-4 col-eq-height" ng-repeat="newsItem in newsReports.articles">
-                <div class="card">
-                    <img class="card-img-top" ng-src="{{newsItem.urlToImage}}">
-                    <p class="card-text" ng-bind="newsItem.publishedAt | date:'MM/dd/yyyy'">{{newsItem.publishedAt}}</p>
-                    <div class="card-block">
-                        <h5 class="text-bold">{{newsItem.title}}</h5>
-    <p><a ng-href="{{newsItem.url}}" class="btn btn-primary">Read More</a></p>
-    
-                    </div>
-                </div>
-            </div>
-            </div>
-  </div>
-  <div class="col-md-7">
-  <h3>LATEST NEWS</h3>
-    <div ng-repeat="newsItem in newsReports.articles" ng-if="$index > 3">
-  <div class="row newscards">
-    
-        <div class="clearfix" ng-if="$index % 3 == 0"></div>
-        <div class="col-sm-4">
-            <img class="card-img-top" ng-src="{{newsItem.urlToImage}}">
-                    <p class="card-text" ng-bind="newsItem.publishedAt | date:'MM/dd/yyyy'">{{newsItem.publishedAt}}</p>
-                    <div class="card-block">
-                        <h3 class="text-bold">{{newsItem.title}}</h3>
-                        <p>{{newsItem.description}}</p>
-    <p><a ng-href="{{newsItem.url}}" class="btn btn-primary">Read More</a></p>
-        </div>
+  <slider ng-include="'templates/slider.html'"></slider><br><br>
+  
+    <div class="showNews">
+    <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+                        <h3 class="text-bold">{{showNewsTitle}} <small> {{showNewsAuthor}}</small></h3>
+                        <p>{{showNewsDescription}}</p>
+        
     </div>
-
-</div></div>
+<div class="col-sm-2"></div>
+  </div>
  </div>
+
+
+
+  <div class="col-md-5">
+    <h3 class="latestnews">LATEST NEWS</h3>
+    <newscards ng-include="'templates/newscards.html'"></newscards>
+  </div>
   </div>
 

@@ -1,7 +1,8 @@
 var app = angular.module('soccerApp', ['ngRoute','NewsCtrl','ContactController'
     ,'SoccerNewsService','ui.bootstrap']);
-app.config(function($routeProvider,$locationProvider) {
+app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider) {
     //$locationProvider.hashPrefix('');
+    $locationProvider.html5Mode(true);
     $routeProvider
     .when('/', {
         templateUrl : 'templates/home.html',
@@ -20,8 +21,8 @@ app.config(function($routeProvider,$locationProvider) {
     }).otherwise({ 
         redirectTo: '/index.html' 
     });
-    $locationProvider.html5Mode(true);
-});
+    
+}]);
 /*var apiKey = 'a6cc22b291b3427dae7796e0b22c931e';
 var ID = 5;
 var SEASON = '2017';
